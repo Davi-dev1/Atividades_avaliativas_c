@@ -13,7 +13,8 @@ int main()
     char nome[50];
     int idade;
     float altura;
-    bool CNH = false;    
+    bool CNH = false;  
+    char resposta;
     
     printf("Digite seu nome ");
     scanf("%s",nome);
@@ -32,15 +33,31 @@ int main()
     
     printf( " A altura é : %.2f", altura);
     
-    if(idade >=18){
+    
+    printf("Voce tem cnh ?");
+    scanf( " %s",&resposta);
+    if(resposta == 'S'|| resposta =='s'){
         CNH = true;
-        printf(" voce tem idade suficiente para tirar a CNH ");
+        printf(" TRUE");
+    }else if(resposta =='N'||resposta =='n'){
+        CNH = false;
+        printf("false");
     }else{
-        printf("Voce não tem idade");
+        printf("Entrada inválida");
     }
     
+    printf("\nMostrando todos os dados : %s,%i,%.2f " ,&nome,idade,altura,CNH);
     
   
+    // char nome[50] = "Ana";
+    // int idade =25 ;
+    // float altura =1.68 ;
+    // bool CNH = true;  
+    
+    // printf("\n nome : %s : ",&nome);
+    //  printf("\n idade : %i : ",idade);
+    //   printf("\n Altura : %.2f : ",&nome);
+    
     
     
     
