@@ -12,7 +12,7 @@ int main()
 {
     //TODO : Receba dois números e um caractere representando uma operação matemática (+, -, *,). Utilize a estrutura switch/case para executar e exibir o resultado da operação. 
     
-    //bom tive q criar um array e apartir dele setar os char das operações, as escolhas dos char são jogados dentro da escolha e usa c para guardar 1 unico valor como é o caso de escolher entre + - *  ou /
+    //bom tive q criar um array e a partir dele setar os char das operações, as escolhas dos char são jogados dentro da escolha e usa %c para guardar 1 unico valor como é o caso de escolher entre + - *  ou /
     
     int numero1;
     int numero2;
@@ -40,6 +40,14 @@ int main()
     numero1-=numero2;
      printf("\nResultado da operação de subtração é : %i",numero1);
      break;
+        	case '*':
+		numero1*=numero2;
+		printf("\nResultado da operação de multiplicação é : %i",numero1);
+		break;
+			case '/':
+		numero1/=numero2;
+		printf("\nResultado da operação da divisão é : %i",numero1);
+		break;
      
      default:
      printf("Opção Inválida");
