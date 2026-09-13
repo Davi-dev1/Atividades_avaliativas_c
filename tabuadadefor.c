@@ -14,7 +14,7 @@ int main()
    
    
   int numero;
-  int indice;
+  int result;
   
   
   printf("\n Digite um número: ");
@@ -23,8 +23,8 @@ int main()
   
   
   for(int i= 1; i<=10; i++){
-      indice = numero*i;
-      printf("\n%i * %i = %i ",numero,i,indice);
+      result = numero*i;
+      printf("\n%i * %i = %i ",numero,i,result);
       
       
   }
