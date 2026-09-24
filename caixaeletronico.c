@@ -5,7 +5,7 @@ float meuSaldo = 0.00;
 void saldo(float valor){
 	
    float saldoAtual = valor;
-   printf("O seu saldo È : %f",saldoAtual); 
+   printf("O seu saldo √© : %f",saldoAtual); 
 }
 
 
@@ -21,11 +21,11 @@ int main(){
 	printf("\n Menu Principal");
 	printf("\n*********");
 	printf("\n1 - Ver saldo");
-	printf("\n2 - MÈtodo para Saque");
-	printf("\n3 - MÈtodo para DepÛsito");
+	printf("\n2 - M√©todo para Saque");
+	printf("\n3 - M√©todo para Dep√≥sito");
 	printf("\n4 - Sair");
   
-  	printf("\nDigite a opÁ„o : ");
+  	printf("\nDigite a op√ß√£o : ");
   	scanf("%i",&opcao);
   	
   	switch(opcao){
@@ -43,7 +43,7 @@ int main(){
   					/////
   					break;
   					default:
-  						printf("OpÁ„o Inv·lida !!");
+  						printf("Op√ß√£o Inv√°lida !!");
   							
 	  }
   	
