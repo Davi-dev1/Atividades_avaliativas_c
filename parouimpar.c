@@ -4,13 +4,13 @@
 int parouimpar(){
 	int entrada;
 	int numero2 = 2;
-	printf("\nDigite um número : ");
+	printf("\nDigite um nÃºmero : ");
 	scanf("%i",&entrada);
 	if(entrada % numero2 == 0 ){
-		printf("O número %i é par ",entrada);
+		printf("O nÃºmero %i Ã© par ",entrada);
 		
 	}else{
-		printf("O número %i é impar ",entrada);
+		printf("O nÃºmero %i Ã© impar ",entrada);
 	}
 	
 	return entrada;
