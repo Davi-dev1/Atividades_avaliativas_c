@@ -4,7 +4,7 @@
 
 #define TAM_NOME 50
 
-/* NÛ da lista duplamente encadeada */
+/* N√≥ da lista duplamente encadeada */
 typedef struct Pessoa {
     char nome[TAM_NOME];
     int idade;
@@ -12,7 +12,7 @@ typedef struct Pessoa {
     struct Pessoa *proximo;
 } Pessoa;
 
-/* Estrutura que guarda o inÌcio, o fim e o tamanho da lista */
+/* Estrutura que guarda o in√≠cio, o fim e o tamanho da lista */
 typedef struct {
     Pessoa *inicio;
     Pessoa *fim;
@@ -26,7 +26,7 @@ void iniciar(Lista *l) {
     l->tamanho = 0;
 }
 
-/* Cria um novo nÛ */
+/* Cria um novo n√≥ */
 Pessoa *criarPessoa(const char *nome, int idade) {
     Pessoa *p = (Pessoa *)malloc(sizeof(Pessoa));
     if (p == NULL) {
@@ -41,7 +41,7 @@ Pessoa *criarPessoa(const char *nome, int idade) {
     return p;
 }
 
-/* Mostra a lista do inÌcio ao fim e do fim ao inÌcio */
+/* Mostra a lista do in√≠cio ao fim e do fim ao in√≠cio */
 void mostrar(const Lista *l) {
     Pessoa *atual;
 
@@ -61,7 +61,7 @@ void mostrar(const Lista *l) {
     printf("\n");
 }
 
-/* Insere no inÌcio da lista */
+/* Insere no in√≠cio da lista */
 void inserirInicio(Lista *l, const char *nome, int idade) {
     Pessoa *p = criarPessoa(nome, idade);
 
@@ -93,7 +93,7 @@ void inserirFim(Lista *l, const char *nome, int idade) {
     mostrar(l);
 }
 
-/* Remove o primeiro nÛ cujo nome seja igual ao informado */
+/* Remove o primeiro n√≥ cujo nome seja igual ao informado */
 int removerPorNome(Lista *l, const char *nome) {
     Pessoa *atual = l->inicio;
 
@@ -115,8 +115,8 @@ int removerPorNome(Lista *l, const char *nome) {
     if (atual->proximo != NULL)
         atual->proximo->anterior = atual->anterior;
     else
-        l->fim = atual->anterior;     /* era o ˙ltimo */
-
+        l->fim = atual->anterior;     /* era o √∫ltimo */
+//free libera memoria, maloc aloca memoria
     printf(">> Removido: %s (%d anos)\n", atual->nome, atual->idade);
     free(atual);
     l->tamanho--;
@@ -136,7 +136,7 @@ int removerInicio(Lista *l) {
     return removerPorNome(l, nome);
 }
 
-/* Remove o ˙ltimo elemento */
+/* Remove o √∫ltimo elemento */
 int removerFim(Lista *l) {
     Pessoa *p = l->fim;
 
@@ -159,7 +159,7 @@ int removerFim(Lista *l) {
     return 1;
 }
 
-/* Libera toda a memÛria da lista */
+/* Libera toda a mem√≥ria da lista */
 void liberar(Lista *l) {
     Pessoa *atual = l->inicio;
     while (atual != NULL) {
@@ -186,7 +186,7 @@ int main(void) {
     removerInicio(&lista);
     removerFim(&lista);
     removerFim(&lista);
-    removerFim(&lista);                /* lista j· vazia */
+    removerFim(&lista);                /* lista j√° vazia */
 
     liberar(&lista);
     return 0;
